@@ -3,12 +3,14 @@ const roles = ['អ្នកអភិវឌ្ឍន៍ Full Stack', 'អ្ន�
 const currentRole = ref(0)
 const displayText = ref('')
 const isDeleting = ref(false)
+const profilePhotoSrc = '/uploads/profile-photo.jpg'
+const profilePhotoAvailable = ref(true)
 
 onMounted(() => {
   let timeout: ReturnType<typeof setTimeout>
 
   const type = () => {
-    const current = roles[currentRole.value]
+    const current = roles[currentRole.value] ?? roles[0]
     if (!isDeleting.value) {
       displayText.value = current.slice(0, displayText.value.length + 1)
       if (displayText.value === current) {
@@ -133,7 +135,15 @@ onMounted(() => {
           <div class="relative">
             <div class="w-72 h-72 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-primary-400/20 to-primary-600/20 border border-primary-500/20 flex items-center justify-center">
               <div class="w-60 h-60 sm:w-72 sm:h-72 rounded-full bg-gradient-to-br from-primary-500/10 to-orange-500/10 border border-primary-400/30 flex items-center justify-center overflow-hidden">
+                <img
+                  v-if="profilePhotoAvailable"
+                  :src="profilePhotoSrc"
+                  alt="VoReach profile photo"
+                  class="h-full w-full object-cover"
+                  @error="profilePhotoAvailable = false"
+                >
                 <UIcon
+                  v-else
                   name="i-lucide-code-2"
                   class="w-32 h-32 text-primary-500/40"
                 />

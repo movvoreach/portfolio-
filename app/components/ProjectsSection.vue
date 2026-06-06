@@ -7,6 +7,10 @@ const projects = [
     github: 'https://github.com/movvoreach/flowpay',
     demo: 'https://flowpay.demo',
     featured: true,
+    photo: {
+      src: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1200&auto=format&fit=crop',
+      alt: 'FlowPay payment dashboard preview'
+    },
     color: 'from-primary-500/20 to-orange-500/20'
   },
   {
@@ -16,6 +20,10 @@ const projects = [
     github: 'https://github.com/movvoreach/datastream',
     demo: 'https://datastream.demo',
     featured: true,
+    photo: {
+      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
+      alt: 'DataStream analytics dashboard preview'
+    },
     color: 'from-blue-500/20 to-purple-500/20'
   },
   {
@@ -25,6 +33,10 @@ const projects = [
     github: 'https://github.com/movvoreach/devkit',
     demo: null,
     featured: true,
+    photo: {
+      src: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop',
+      alt: 'DevKit CLI terminal workspace preview'
+    },
     color: 'from-green-500/20 to-teal-500/20'
   },
   {
@@ -34,6 +46,10 @@ const projects = [
     github: 'https://github.com/movvoreach/contentai',
     demo: 'https://contentai.demo',
     featured: false,
+    photo: {
+      src: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop',
+      alt: 'ContentAI writing and automation preview'
+    },
     color: 'from-pink-500/20 to-rose-500/20'
   },
   {
@@ -43,6 +59,10 @@ const projects = [
     github: 'https://github.com/movvoreach/shopedge',
     demo: 'https://shopedge.demo',
     featured: false,
+    photo: {
+      src: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1200&auto=format&fit=crop',
+      alt: 'ShopEdge ecommerce storefront preview'
+    },
     color: 'from-indigo-500/20 to-blue-500/20'
   },
   {
@@ -52,6 +72,10 @@ const projects = [
     github: 'https://github.com/movvoreach/authforge',
     demo: null,
     featured: false,
+    photo: {
+      src: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?q=80&w=1200&auto=format&fit=crop',
+      alt: 'AuthForge secure access preview'
+    },
     color: 'from-violet-500/20 to-purple-500/20'
   }
 ]
@@ -64,7 +88,10 @@ const filtered = computed(() =>
 </script>
 
 <template>
-  <section id="projects" class="py-24">
+  <section
+    id="projects"
+    class="py-24"
+  >
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div
         v-motion
@@ -72,8 +99,12 @@ const filtered = computed(() =>
         :visible="{ opacity: 1, y: 0, transition: { duration: 500 } }"
         class="text-center mb-12"
       >
-        <p class="text-primary-500 font-semibold text-sm uppercase tracking-widest mb-3">ការងារ</p>
-        <h2 class="text-3xl sm:text-4xl font-bold">គម្រោង</h2>
+        <p class="text-primary-500 font-semibold text-sm uppercase tracking-widest mb-3">
+          ការងារ
+        </p>
+        <h2 class="text-3xl sm:text-4xl font-bold">
+          គម្រោង
+        </h2>
         <p class="text-muted mt-4 max-w-xl mx-auto">
           គម្រោងមួយចំនួនដែលខ្ញុំបានបង្កើត ចាប់ពីឧបករណ៍ Open Source រហូតដល់ផលិតផល SaaS។
         </p>
@@ -103,13 +134,31 @@ const filtered = computed(() =>
           <UCard class="h-full card-hover group relative overflow-hidden">
             <div :class="['absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-br', project.color]" />
             <div class="relative">
+              <div class="relative -mx-6 -mt-6 mb-5 h-44 overflow-hidden bg-muted">
+                <img
+                  :src="project.photo.src"
+                  :alt="project.photo.alt"
+                  class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                  loading="lazy"
+                >
+                <div class="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-background/80 to-transparent" />
+              </div>
               <div class="flex items-start justify-between mb-3">
-                <h3 class="font-bold text-lg">{{ project.title }}</h3>
-                <UBadge v-if="project.featured" color="primary" variant="subtle" size="xs">
+                <h3 class="font-bold text-lg">
+                  {{ project.title }}
+                </h3>
+                <UBadge
+                  v-if="project.featured"
+                  color="primary"
+                  variant="subtle"
+                  size="xs"
+                >
                   ពិសេស
                 </UBadge>
               </div>
-              <p class="text-sm text-muted leading-relaxed mb-4">{{ project.description }}</p>
+              <p class="text-sm text-muted leading-relaxed mb-4">
+                {{ project.description }}
+              </p>
               <div class="flex flex-wrap gap-1.5 mb-4">
                 <UBadge
                   v-for="tag in project.tags"
