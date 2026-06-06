@@ -2,64 +2,64 @@
 const projects = [
   {
     title: 'FlowPay',
-    description: 'Real-time payment processing platform with multi-currency support, fraud detection, and a merchant dashboard. Handles $2M+ in daily transactions.',
+    description: 'ប្រព័ន្ធដំណើរការទូទាត់ពេលវេលាពិត ដែលគាំទ្ររូបិយប័ណ្ណច្រើន ការរកឃើញការក្លែងបន្លំ និង Dashboard សម្រាប់អាជីវករ។',
     tags: ['Node.js', 'PostgreSQL', 'Redis', 'Vue 3', 'Stripe'],
-    github: 'https://github.com/PhatNiroth/flowpay',
+    github: 'https://github.com/movvoreach/flowpay',
     demo: 'https://flowpay.demo',
     featured: true,
     color: 'from-primary-500/20 to-orange-500/20'
   },
   {
     title: 'DataStream',
-    description: 'High-throughput event streaming pipeline built on Kafka. Processes 100k+ events/second with real-time dashboards and alerting.',
+    description: 'ប្រព័ន្ធបញ្ជូនទិន្នន័យ Event ល្បឿនខ្ពស់ដែលបង្កើតលើ Kafka មាន Dashboard និងការជូនដំណឹងពេលវេលាពិត។',
     tags: ['Go', 'Kafka', 'ClickHouse', 'React', 'Grafana'],
-    github: 'https://github.com/PhatNiroth/datastream',
+    github: 'https://github.com/movvoreach/datastream',
     demo: 'https://datastream.demo',
     featured: true,
     color: 'from-blue-500/20 to-purple-500/20'
   },
   {
     title: 'DevKit CLI',
-    description: 'Open-source CLI tool for scaffolding production-ready microservices with Docker, CI/CD, and observability baked in. 2k+ GitHub stars.',
+    description: 'ឧបករណ៍ CLI បែប Open Source សម្រាប់បង្កើត Microservice ដែលត្រៀមប្រើប្រាស់ជាមួយ Docker, CI/CD និងការតាមដានប្រព័ន្ធ។',
     tags: ['Go', 'Docker', 'GitHub Actions', 'Open Source'],
-    github: 'https://github.com/PhatNiroth/devkit',
+    github: 'https://github.com/movvoreach/devkit',
     demo: null,
     featured: true,
     color: 'from-green-500/20 to-teal-500/20'
   },
   {
     title: 'ContentAI',
-    description: 'AI-powered content management system with auto-tagging, SEO scoring, and multi-author workflows.',
+    description: 'ប្រព័ន្ធគ្រប់គ្រងមាតិកាដែលប្រើ AI សម្រាប់ Tag ស្វ័យប្រវត្តិ ពិន្ទុ SEO និងដំណើរការអ្នកនិពន្ធច្រើននាក់។',
     tags: ['Next.js', 'Python', 'OpenAI', 'Supabase'],
-    github: 'https://github.com/PhatNiroth/contentai',
+    github: 'https://github.com/movvoreach/contentai',
     demo: 'https://contentai.demo',
     featured: false,
     color: 'from-pink-500/20 to-rose-500/20'
   },
   {
     title: 'ShopEdge',
-    description: 'Headless e-commerce engine with a composable storefront, inventory management, and analytics.',
+    description: 'ប្រព័ន្ធ E-commerce បែប Headless មាន Storefront ដែលអាចកែតម្រូវបាន ការគ្រប់គ្រងស្តុក និងវិភាគទិន្នន័យ។',
     tags: ['Nuxt 3', 'Medusa.js', 'PostgreSQL', 'Stripe'],
-    github: 'https://github.com/PhatNiroth/shopedge',
+    github: 'https://github.com/movvoreach/shopedge',
     demo: 'https://shopedge.demo',
     featured: false,
     color: 'from-indigo-500/20 to-blue-500/20'
   },
   {
     title: 'AuthForge',
-    description: 'Self-hosted authentication service with OAuth2, SAML, magic links, and a management UI.',
+    description: 'សេវាកម្ម Authentication ដែលដាក់នៅ Server ផ្ទាល់ មាន OAuth2, SAML, Magic Link និង UI សម្រាប់គ្រប់គ្រង។',
     tags: ['Go', 'JWT', 'Redis', 'Vue 3'],
-    github: 'https://github.com/PhatNiroth/authforge',
+    github: 'https://github.com/movvoreach/authforge',
     demo: null,
     featured: false,
     color: 'from-violet-500/20 to-purple-500/20'
   }
 ]
 
-const filter = ref('All')
-const filters = ['All', 'Featured']
+const filter = ref('ទាំងអស់')
+const filters = ['ទាំងអស់', 'ពិសេស']
 const filtered = computed(() =>
-  filter.value === 'Featured' ? projects.filter(p => p.featured) : projects
+  filter.value === 'ពិសេស' ? projects.filter(p => p.featured) : projects
 )
 </script>
 
@@ -72,10 +72,10 @@ const filtered = computed(() =>
         :visible="{ opacity: 1, y: 0, transition: { duration: 500 } }"
         class="text-center mb-12"
       >
-        <p class="text-primary-500 font-semibold text-sm uppercase tracking-widest mb-3">Work</p>
-        <h2 class="text-3xl sm:text-4xl font-bold">Projects</h2>
+        <p class="text-primary-500 font-semibold text-sm uppercase tracking-widest mb-3">ការងារ</p>
+        <h2 class="text-3xl sm:text-4xl font-bold">គម្រោង</h2>
         <p class="text-muted mt-4 max-w-xl mx-auto">
-          A selection of things I've built — from open-source tools to production SaaS products.
+          គម្រោងមួយចំនួនដែលខ្ញុំបានបង្កើត ចាប់ពីឧបករណ៍ Open Source រហូតដល់ផលិតផល SaaS។
         </p>
 
         <div class="flex justify-center gap-2 mt-6">
@@ -106,7 +106,7 @@ const filtered = computed(() =>
               <div class="flex items-start justify-between mb-3">
                 <h3 class="font-bold text-lg">{{ project.title }}</h3>
                 <UBadge v-if="project.featured" color="primary" variant="subtle" size="xs">
-                  Featured
+                  ពិសេស
                 </UBadge>
               </div>
               <p class="text-sm text-muted leading-relaxed mb-4">{{ project.description }}</p>
@@ -130,7 +130,7 @@ const filtered = computed(() =>
                   variant="ghost"
                   size="xs"
                 >
-                  Code
+                  កូដ
                 </UButton>
                 <UButton
                   v-if="project.demo"
@@ -141,7 +141,7 @@ const filtered = computed(() =>
                   variant="ghost"
                   size="xs"
                 >
-                  Live Demo
+                  មើល Demo
                 </UButton>
               </div>
             </div>
@@ -151,14 +151,14 @@ const filtered = computed(() =>
 
       <div class="text-center mt-10">
         <UButton
-          to="https://github.com/PhatNiroth"
+          to="https://github.com/movvoreach"
           target="_blank"
           color="neutral"
           variant="outline"
           icon="i-simple-icons-github"
           trailing-icon="i-lucide-arrow-right"
         >
-          See all on GitHub
+          មើលទាំងអស់នៅ GitHub
         </UButton>
       </div>
     </div>

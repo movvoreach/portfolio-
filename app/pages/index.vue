@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Niroth — Senior Full Stack Developer',
-  description: 'Senior Full Stack Developer specializing in building scalable web applications, APIs, and developer tools.'
+  title: 'Reach - អ្នកអភិវឌ្ឍន៍ Full Stack',
+  description: 'អ្នកអភិវឌ្ឍន៍ Full Stack ដែលផ្តោតលើការបង្កើតគេហទំព័រ កម្មវិធីវេប API និងឧបករណ៍សម្រាប់អ្នកអភិវឌ្ឍន៍។'
 })
 </script>
 

@@ -2,8 +2,8 @@
 const props = defineProps<{ error: { statusCode: number, message: string } }>()
 
 useSeoMeta({
-  title: '404 — Page Not Found | Niroth',
-  description: 'The page you are looking for does not exist.'
+  title: '404 - រកមិនឃើញទំព័រ | Reach',
+  description: 'ទំព័រដែលអ្នកកំពុងស្វែងរកមិនមានទេ។'
 })
 
 const handleError = () => clearError({ redirect: '/' })
@@ -27,21 +27,21 @@ const handleError = () => clearError({ redirect: '/' })
       </p>
 
       <h1 class="text-2xl sm:text-3xl font-bold mt-4 mb-2">
-        Page Not Found
+        រកមិនឃើញទំព័រ
       </h1>
 
       <p class="text-gray-500 dark:text-gray-400 mb-10">
-        The page you're looking for doesn't exist or has been moved.
+        ទំព័រដែលអ្នកកំពុងស្វែងរកមិនមានទេ ឬត្រូវបានផ្លាស់ទីហើយ។
       </p>
 
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
         <UButton size="lg" color="primary" @click="handleError">
           <UIcon name="i-lucide-home" class="mr-1.5" />
-          Back to Home
+          ត្រឡប់ទៅទំព័រដើម
         </UButton>
         <UButton size="lg" variant="outline" to="/blog">
           <UIcon name="i-lucide-book-open" class="mr-1.5" />
-          Read the Blog
+          អានប្លុក
         </UButton>
       </div>
     </div>

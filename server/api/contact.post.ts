@@ -23,8 +23,8 @@ export default defineEventHandler(async (event) => {
   const resend = new Resend(config.resendApiKey)
 
   await resend.emails.send({
-    from: 'Portfolio Contact <contact@niroth.dev>',
-    to: 'niroth@example.com',
+    from: 'Portfolio Contact <contact@Reach.dev>',
+    to: 'movvoreach@example.com',
     replyTo: email,
     subject: `[Portfolio] ${subject}`,
     html: `

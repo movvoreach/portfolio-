@@ -14,12 +14,12 @@ const { data: posts } = await useAsyncData('blog-preview', () =>
         class="flex items-end justify-between mb-12"
       >
         <div>
-          <p class="text-primary-500 font-semibold text-sm uppercase tracking-widest mb-3">Writing</p>
-          <h2 class="text-3xl sm:text-4xl font-bold">Latest Articles</h2>
-          <p class="text-muted mt-2">Thoughts on engineering, architecture, and developer culture.</p>
+          <p class="text-primary-500 font-semibold text-sm uppercase tracking-widest mb-3">អត្ថបទ</p>
+          <h2 class="text-3xl sm:text-4xl font-bold">អត្ថបទថ្មីៗ</h2>
+          <p class="text-muted mt-2">គំនិតអំពីវិស្វកម្ម ស្ថាបត្យកម្មប្រព័ន្ធ និងវប្បធម៌អ្នកអភិវឌ្ឍន៍។</p>
         </div>
         <UButton to="/blog" variant="ghost" color="neutral" trailing-icon="i-lucide-arrow-right" class="hidden sm:flex">
-          All Articles
+          អត្ថបទទាំងអស់
         </UButton>
       </div>
 
@@ -35,8 +35,8 @@ const { data: posts } = await useAsyncData('blog-preview', () =>
           <UCard class="h-full card-hover">
             <div class="flex flex-col h-full">
               <div class="flex items-center gap-2 mb-3">
-                <UBadge color="primary" variant="subtle" size="xs">{{ post.category || 'Engineering' }}</UBadge>
-                <span class="text-xs text-muted">{{ post.readTime || '5 min read' }}</span>
+                <UBadge color="primary" variant="subtle" size="xs">{{ post.category || 'វិស្វកម្ម' }}</UBadge>
+                <span class="text-xs text-muted">{{ post.readTime || '៥ នាទីអាន' }}</span>
               </div>
               <h3 class="font-bold text-lg leading-snug mb-2 group-hover:text-primary-500 transition-colors">
                 {{ post.title }}
@@ -44,7 +44,7 @@ const { data: posts } = await useAsyncData('blog-preview', () =>
               <p class="text-sm text-muted leading-relaxed flex-1">{{ post.description }}</p>
               <div class="flex items-center gap-2 mt-4 pt-4 border-t border-border">
                 <UAvatar size="xs" icon="i-lucide-user" />
-                <span class="text-xs text-muted">Niroth · {{ new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }}</span>
+                <span class="text-xs text-muted">Reach · {{ new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) }}</span>
               </div>
             </div>
           </UCard>
@@ -61,25 +61,25 @@ const { data: posts } = await useAsyncData('blog-preview', () =>
           :visible="{ opacity: 1, y: 0, transition: { duration: 400, delay: (i - 1) * 100 } }"
         >
           <div class="flex items-center gap-2 mb-3">
-            <UBadge color="primary" variant="subtle" size="xs">Engineering</UBadge>
-            <span class="text-xs text-muted">8 min read</span>
+            <UBadge color="primary" variant="subtle" size="xs">វិស្វកម្ម</UBadge>
+            <span class="text-xs text-muted">៨ នាទីអាន</span>
           </div>
           <h3 class="font-bold text-lg leading-snug mb-2">
-            {{ ['Building Scalable APIs with Node.js and PostgreSQL', 'From Monolith to Microservices: Lessons Learned', 'The Developer Experience Gap: Why DX Matters'][i - 1] }}
+            {{ ['ការបង្កើត API ដែលអាចពង្រីកបានជាមួយ Node.js និង PostgreSQL', 'ពី Monolith ទៅ Microservices៖ មេរៀនដែលបានរៀន', 'ហេតុអ្វីបទពិសោធន៍អ្នកអភិវឌ្ឍន៍មានសារៈសំខាន់'][i - 1] }}
           </h3>
           <p class="text-sm text-muted leading-relaxed">
-            {{ ['A deep dive into designing APIs that grow gracefully under load.', 'What I learned migrating a 5-year-old Rails app to microservices.', 'Why developer experience is the silent multiplier on team velocity.'][i - 1] }}
+            {{ ['ការពន្យល់អំពីការរចនា API ដែលអាចធ្វើការល្អនៅពេលមានអ្នកប្រើច្រើន។', 'អ្វីដែលខ្ញុំបានរៀនពីការបម្លែងកម្មវិធីចាស់ទៅជា Microservices។', 'ហេតុអ្វីបទពិសោធន៍អ្នកអភិវឌ្ឍន៍ជួយបង្កើនល្បឿនក្រុម។'][i - 1] }}
           </p>
           <div class="flex items-center gap-2 mt-4 pt-4 border-t border-border">
             <UAvatar size="xs" icon="i-lucide-user" />
-            <span class="text-xs text-muted">Niroth · Coming soon</span>
+            <span class="text-xs text-muted">Reach · មកដល់ឆាប់ៗ</span>
           </div>
         </UCard>
       </div>
 
       <div class="text-center mt-8 sm:hidden">
         <UButton to="/blog" color="neutral" variant="outline" trailing-icon="i-lucide-arrow-right">
-          All Articles
+          អត្ថបទទាំងអស់
         </UButton>
       </div>
     </div>

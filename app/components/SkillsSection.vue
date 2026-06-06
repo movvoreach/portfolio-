@@ -1,42 +1,42 @@
 <script setup lang="ts">
 const categories = [
   {
-    label: 'Frontend',
+    label: 'ផ្នែកមុខ',
     icon: 'i-lucide-monitor',
     color: 'text-blue-500',
     bg: 'bg-blue-500/10',
-    skills: ['Vue 3 / Nuxt 3', 'React / Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'WebSockets']
+    skills: ['Html','Css', 'React', 'Javascript / Jquery', 'Tailwind CSS']
   },
   {
-    label: 'Backend',
+    label: 'ផ្នែកក្រោយ',
     icon: 'i-lucide-server',
     color: 'text-green-500',
     bg: 'bg-green-500/10',
-    skills: ['Node.js / Bun', 'Go', 'Python', 'REST & GraphQL', 'gRPC', 'tRPC']
+    skills: ['Node.js / Express.js', 'Python / Django','Php / Laravel']
   },
   {
-    label: 'Database',
+    label: 'មូលដ្ឋានទិន្នន័យ',
     icon: 'i-lucide-database',
     color: 'text-primary-500',
     bg: 'bg-primary-500/10',
-    skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Supabase']
+    skills: ['PostgreSQL', 'MySQL', 'MongoDB']
   },
   {
-    label: 'DevOps & Cloud',
+    label: 'DevOps និង Cloud',
     icon: 'i-lucide-cloud',
     color: 'text-purple-500',
     bg: 'bg-purple-500/10',
-    skills: ['AWS', 'GCP', 'Docker', 'Kubernetes', 'CI/CD', 'Terraform']
+    skills: ['Docker','CI/CD']
   },
   {
-    label: 'Tools',
+    label: 'ឧបករណ៍',
     icon: 'i-lucide-wrench',
     color: 'text-orange-500',
     bg: 'bg-orange-500/10',
-    skills: ['Git', 'GitHub Actions', 'Postman', 'Figma', 'Linear', 'Datadog']
+    skills: ['Git', 'GitHub Actions', 'Postman', 'Figma']
   },
   {
-    label: 'Architecture',
+    label: 'ស្ថាបត្យកម្មប្រព័ន្ធ',
     icon: 'i-lucide-layers',
     color: 'text-pink-500',
     bg: 'bg-pink-500/10',
@@ -54,10 +54,10 @@ const categories = [
         :visible="{ opacity: 1, y: 0, transition: { duration: 500 } }"
         class="text-center mb-16"
       >
-        <p class="text-primary-500 font-semibold text-sm uppercase tracking-widest mb-3">Skills</p>
-        <h2 class="text-3xl sm:text-4xl font-bold">My Tech Stack</h2>
+        <p class="text-primary-500 font-semibold text-sm uppercase tracking-widest mb-3">ជំនាញ</p>
+        <h2 class="text-3xl sm:text-4xl font-bold">បច្ចេកវិទ្យាដែលខ្ញុំប្រើ</h2>
         <p class="text-muted mt-4 max-w-xl mx-auto">
-          A curated set of tools and technologies I use to build fast, reliable, and maintainable systems.
+          សំណុំឧបករណ៍ និងបច្ចេកវិទ្យាដែលខ្ញុំប្រើសម្រាប់បង្កើតប្រព័ន្ធដែលលឿន ទុកចិត្តបាន និងងាយថែទាំ។
         </p>
       </div>
 

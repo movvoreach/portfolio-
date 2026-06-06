@@ -2,7 +2,7 @@
 @import "@nuxt/ui";
 
 @theme static {
-  --font-sans: 'Inter', sans-serif;
+  --font-sans: 'Noto Sans Khmer', 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   --color-amber-50: #fffbeb;

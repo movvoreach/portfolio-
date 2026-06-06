@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const socials = [
-  { icon: 'i-simple-icons-github', href: 'https://github.com/PhatNiroth', label: 'GitHub' },
-  { icon: 'i-simple-icons-linkedin', href: 'https://www.linkedin.com/in/niroth-phat-836a5424a/', label: 'LinkedIn' },
+  { icon: 'i-simple-icons-github', href: 'https://github.com/movvoreach', label: 'GitHub' },
+  { icon: 'i-simple-icons-linkedin', href: 'https://www.linkedin.com/in/mov-vo-reach-644846311/', label: 'LinkedIn' },
   { icon: 'i-simple-icons-x', href: 'https://x.com/niroth', label: 'X / Twitter' }
 ]
 </script>
@@ -12,10 +12,10 @@ const socials = [
       <div class="flex flex-col md:flex-row items-center justify-between gap-4">
         <div>
           <p class="font-bold text-lg">
-            <span class="gradient-text">Niroth</span>
+            <span class="gradient-text">Reach</span>
             <span class="text-muted">.dev</span>
           </p>
-          <p class="text-sm text-muted mt-1">Senior Full Stack Developer</p>
+          <p class="text-sm text-muted mt-1">អ្នកអភិវឌ្ឍន៍ Full Stack</p>
         </div>
 
         <div class="flex items-center gap-2">
@@ -35,7 +35,7 @@ const socials = [
       <USeparator class="my-6" />
 
       <p class="text-center text-sm text-muted">
-        © {{ new Date().getFullYear() }} Niroth. Built with Nuxt 3 & Nuxt UI.
+        © {{ new Date().getFullYear() }} Reach។ បង្កើតជាមួយ Nuxt 3 និង Nuxt UI។
       </p>
     </div>
   </footer>

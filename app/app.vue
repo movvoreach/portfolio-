@@ -7,16 +7,16 @@ useHead({
     { rel: 'icon', href: '/favicon.ico' },
     { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
     { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap' }
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Khmer:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap' }
   ],
-  htmlAttrs: { lang: 'en' }
+  htmlAttrs: { lang: 'km' }
 })
 
 useSeoMeta({
-  title: 'Niroth — Senior Full Stack Developer',
-  description: 'Senior Full Stack Developer specializing in building scalable web applications, APIs, and developer tools.',
-  ogTitle: 'Niroth — Senior Full Stack Developer',
-  ogDescription: 'Senior Full Stack Developer specializing in building scalable web applications, APIs, and developer tools.',
+  title: 'Reach - អ្នកអភិវឌ្ឍន៍ Full Stack',
+  description: 'អ្នកអភិវឌ្ឍន៍ Full Stack ដែលផ្តោតលើការបង្កើតគេហទំព័រ កម្មវិធីវេប API និងឧបករណ៍សម្រាប់អ្នកអភិវឌ្ឍន៍។',
+  ogTitle: 'Reach - អ្នកអភិវឌ្ឍន៍ Full Stack',
+  ogDescription: 'អ្នកអភិវឌ្ឍន៍ Full Stack ដែលផ្តោតលើការបង្កើតគេហទំព័រ កម្មវិធីវេប API និងឧបករណ៍សម្រាប់អ្នកអភិវឌ្ឍន៍។',
   twitterCard: 'summary_large_image'
 })
 </script>

@@ -1,11 +1,10 @@
 <script setup lang="ts">
-const route = useRoute()
-
 const links = [
   { label: 'About', to: '/#about' },
-  { label: 'Projects', to: '/#projects' },
+  { label: 'Project', to: '/#projects' },
   { label: 'Skills', to: '/#skills' },
   { label: 'Blog', to: '/blog' },
+  { label: 'Vlog', to: '/vlog' },
   { label: 'Contact', to: '/#contact' }
 ]
 
@@ -25,8 +24,11 @@ onMounted(() => {
   >
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
-        <NuxtLink to="/" class="font-bold text-xl tracking-tight">
-          <span class="gradient-text">Niroth</span>
+        <NuxtLink
+          to="/"
+          class="font-bold text-xl tracking-tight"
+        >
+          <span class="gradient-text">Reach</span>
           <span class="text-muted">.dev</span>
         </NuxtLink>
 
@@ -44,7 +46,7 @@ onMounted(() => {
         <div class="flex items-center gap-2">
           <UColorModeButton />
           <UButton
-            to="https://github.com/PhatNiroth"
+            to="https://github.com/movvoreach"
             target="_blank"
             icon="i-simple-icons-github"
             aria-label="GitHub"
